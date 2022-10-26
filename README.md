@@ -21,5 +21,6 @@ The specifications and functionalties of the NoC Router:
 7) The FIFO has k+1 entries (as parameterized in the FIFO design code) with 16 bits wide.
 8) The Crossbar will transfer the flits from one FIFO buffer to another on the basis of Route Compute and Switch Arbiter Unit.
 9) The Route Compute Unit determines the output port of a flit on the basis of its source and destination address. I have used XY Routing algorithm.
-10) The Switch Arbiter Unit (here the arbitration policy is Round Robin) 
+10) The Switch Arbiter Unit (here the arbitration policy is Round Robin) gives equal amount of clock cycles as priority for each and every FIFO buffer on a circular basis thus effectively balancing the load.
+11) In the Switch_Arbiter design code, I have parametrized the number of clock cycles as 'm'.
 
