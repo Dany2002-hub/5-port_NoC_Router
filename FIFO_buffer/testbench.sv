@@ -1,5 +1,5 @@
 module tb();
-  localparam n=4;
+  localparam k=4;
   
   reg clk, RD, WR;
   reg [15:0] data;
@@ -7,7 +7,7 @@ module tb();
   wire emp, full;
   
   Fifo_buffer
-  #(.n(n))
+  #(.k(k))
   LUT(clk, RD, WR, data, out, emp, full);
   
   initial begin
